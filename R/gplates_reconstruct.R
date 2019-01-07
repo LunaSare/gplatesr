@@ -1,4 +1,9 @@
-
+#' Example of
+#' @param lon A numeric vector of length one.
+#' @param lat A numeric vector of length one.
+#' @param age A numeric vector of length one.
+#' @return coordinates
+#' @export
 
 gplates_reconstruct_point <- function(lon,lat,age){
 

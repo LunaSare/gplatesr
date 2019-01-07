@@ -15,7 +15,13 @@ dat2 <- gplates_reconstruct_static_polygons(recon_time)
 dat3 <- gplates_plate_polygons(recon_time)
 
 #coords = gplates_reconstruct_point(20,-25,recon_time)
-
+# getting:
+# Error in file(con, "r") :
+#   cannot open the connection to 'http://gws.gplates.org/reconstruct/reconstruct_points/?points=20,-25&time=140&model=default'
+# In addition: Warning message:
+# In file(con, "r") :
+#   cannot open URL 'https://gws.gplates.org/reconstruct/reconstruct_points/?points=20,-25&time=140&model=default': HTTP status was '400 Bad Request'
+#
 dat_map <- fortify(dat)
 dat2_map <- fortify(dat2)
 dat3_map <- fortify(dat3)
@@ -34,8 +40,8 @@ gg <- gg + geom_map(data=dat3_map, map=dat3_map,
                     aes(x=long, y=lat, map_id=id),
                     color="red", size=0.15, fill=NA)
 #gg <- gg + geom_point(aes(x=coords[1], y=coords[2]))
-gg <- gg + geom_rect(data=outline, 
-                     aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax), 
+gg <- gg + geom_rect(data=outline,
+                     aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax),
                      color=1, fill=NA, size=0.3)
 gg <- gg + scale_size(name="Magnitude", trans="exp", labels=c(5:8), range=c(1, 20))
 gg <- gg + coord_map("mollweide")

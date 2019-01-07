@@ -2,12 +2,11 @@ Package: gplatesr
 Title: GPlates examples
 Version: 0.0.0.9000
 Authors@R:
-    person(given = "EarthByte Group",
-           family = "",
+    person(given = "EarthByte",
+           family = "Group",
            role = c("aut", "cre"),
-           email = "")
+           email = "dietmar.muller@sydney.edu.au")
 Maintainer: Luna L. Sanchez-Reyes <sanchez.reyes.luna@gmail.com>
-# Brian O'Meara <omeara.brian@gmail.com>
 Description: R examples from GPlates.
 Depends:
     R (>= 3.2.3)
@@ -19,4 +18,6 @@ RoxygenNote: 6.1.1
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
-# VignetteBuilder: knitr
+VignetteBuilder: knitr
+Suggests:
+    testthat
