@@ -1,12 +1,22 @@
 Package: gplatesr
-Title: gplates example
+Title: GPlates examples
 Version: 0.0.0.9000
 Authors@R:
-    person(given = "First",
-           family = "Last",
+    person(given = "EarthByte Group",
+           family = "",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "")
+Maintainer: Luna L. Sanchez-Reyes <sanchez.reyes.luna@gmail.com>
+# Brian O'Meara <omeara.brian@gmail.com>
+Description: R examples from GPlates.
+Depends:
+    R (>= 3.2.3)
+Imports:
+    jsonlite,
+    rgdal
+URL: https://www.earthbyte.org
+RoxygenNote: 6.1.1
+License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
+# VignetteBuilder: knitr
