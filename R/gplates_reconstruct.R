@@ -34,9 +34,9 @@ gplates_reconstruct_coastlines <- function(age){
 
   r <- GET(fullrequest)
   bin <- content(r, "raw")
-  writeBin(bin, "myfile.geojson")
+  writeBin(bin, "~/tmp/myfile.geojson")
 
-  dat <- readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  dat <- readOGR(dsn="~/tmp/myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
 
   return(dat)
 }
@@ -55,9 +55,9 @@ gplates_reconstruct_static_polygons <- function(age){
 
   r <- GET(fullrequest)
   bin <- content(r, "raw")
-  writeBin(bin, "myfile.geojson")
+  writeBin(bin, "~/tmp/myfile.geojson")
 
-  dat <- readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  dat <- readOGR(dsn="~/tmp/myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
 
   return(dat)
 }

@@ -12,12 +12,10 @@ Depends:
     R (>= 3.2.3)
 Imports:
     jsonlite,
-    rgdal,
     magrittr,
     rgeos,
     rgdal,
     ggplot2,
-    jsonlite,
     httr,
     ggthemes,
     mapproj,

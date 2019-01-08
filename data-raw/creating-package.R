@@ -7,7 +7,7 @@ usethis::use_git()
 usethis::use_readme_md()
 usethis::use_data_raw()
 # move this file to data-raw
-# write function descriptions, then:
+# write function descriptions. Then:
 roxygen2::roxygenise() # this creates man folder
 # start writing tests:
 usethis::use_test("gplates_reconstruct")
