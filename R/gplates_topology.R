@@ -14,11 +14,11 @@ gplates_plate_polygons <- function(age){
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
 
-  r <- GET(fullrequest)
-  bin <- content(r, "raw")
+  r <- httr::GET(fullrequest)
+  bin <- httr::content(r, "raw")
   writeBin(bin, "myfile.geojson")
 
-  dat <- readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  dat <- httr::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
 
   return(dat)
 }
@@ -35,11 +35,11 @@ gplates_plate_boundaries <- function(age){
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
 
-  r <- GET(fullrequest)
-  bin <- content(r, "raw")
+  r <- httr::GET(fullrequest)
+  bin <- httr::content(r, "raw")
   writeBin(bin, "myfile.geojson")
 
-  pb <- readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  pb <- httr::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
 
   return(pb)
 }
