@@ -1,8 +1,8 @@
-#' Example of
+#' Reconstruct a point
 #' @param lon A numeric vector of length one.
 #' @param lat A numeric vector of length one.
-#' @param age A numeric vector of length one.
-#' @return coordinates
+#' @param age A numeric vector of length one indicating the geologic time to reconstruct.
+#' @return Coordinates
 #' @export
 
 gplates_reconstruct_point <- function(lon,lat,age){
@@ -20,6 +20,10 @@ gplates_reconstruct_point <- function(lon,lat,age){
   return(rcoords)
 }
 
+#' Reconstruct ancient coastlines
+#' @inherit gplates_reconstruct_point
+#' @return An S4 object of class SpatialPolygonsDataFrame
+#' @export
 gplates_reconstruct_coastlines <- function(age){
 
   url <- 'http://gws.gplates.org/reconstruct/coastlines/'
@@ -37,6 +41,10 @@ gplates_reconstruct_coastlines <- function(age){
   return(dat)
 }
 
+#' Reconstruct tectonic plates polygons
+#' @inherit gplates_reconstruct_point
+#' @return An S4 object of class SpatialPolygonsDataFrame
+#' @export
 gplates_reconstruct_static_polygons <- function(age){
 
   url <- 'http://gws.gplates.org/reconstruct/static_polygons/'

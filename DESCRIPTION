@@ -12,7 +12,17 @@ Depends:
     R (>= 3.2.3)
 Imports:
     jsonlite,
-    rgdal
+    rgdal,
+    magrittr,
+    rgeos,
+    rgdal,
+    ggplot2,
+    jsonlite,
+    httr,
+    ggthemes,
+    mapproj,
+    rmarkdown,
+    knitr
 URL: https://www.earthbyte.org
 RoxygenNote: 6.1.1
 License: GPL (>=2)
