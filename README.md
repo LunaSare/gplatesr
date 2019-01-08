@@ -14,11 +14,8 @@ Alternatively you can install it directly from github with:
 devtools::install_github("LunaSare/gplatesr")
 ```
 
-## Example
+## Following the example code in the vignette you can generate figures like this one
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-## basic example code
+```{r, echo = F}
+knitr::include_graphics("plate-recons-140.png", dpi = 360)
 ```
-
