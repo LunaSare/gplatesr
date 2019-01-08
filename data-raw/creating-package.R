@@ -9,7 +9,8 @@ usethis::use_data_raw()
 # move this file to data-raw
 # write function descriptions. Then:
 roxygen2::roxygenise() # this creates man folder
-# start writing tests:
+# write down global function definitions inside functions.
+# write some tests:
 usethis::use_test("gplates_reconstruct")
 # write vignette based on files run_example.R and run_plate_boundary_example.R
 install.packages("rmarkdown")

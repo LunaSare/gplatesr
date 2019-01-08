@@ -14,7 +14,7 @@ gplates_reconstruct_point <- function(lon,lat,age){
 
   print(fullrequest)
   rawdata <- readLines(fullrequest, warn="F")
-  dat <- httr::fromJSON(rawdata)
+  dat <- jsonlite::fromJSON(rawdata)
 
   rcoords = dat['coordinates'][[1]]
   return(rcoords)
@@ -36,7 +36,7 @@ gplates_reconstruct_coastlines <- function(age){
   bin <- httr::content(r, "raw")
   writeBin(bin, "myfile.geojson")
 
-  dat <- httr::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  dat <- rgdal::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
 
   return(dat)
 }
@@ -57,7 +57,7 @@ gplates_reconstruct_static_polygons <- function(age){
   bin <- httr::content(r, "raw")
   writeBin(bin, "myfile.geojson")
 
-  dat <- httr::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  dat <- rgdal::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
 
   return(dat)
 }

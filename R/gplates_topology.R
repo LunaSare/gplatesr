@@ -18,7 +18,7 @@ gplates_plate_polygons <- function(age){
   bin <- httr::content(r, "raw")
   writeBin(bin, "myfile.geojson")
 
-  dat <- httr::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  dat <- rgdal::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
 
   return(dat)
 }
@@ -39,7 +39,7 @@ gplates_plate_boundaries <- function(age){
   bin <- httr::content(r, "raw")
   writeBin(bin, "myfile.geojson")
 
-  pb <- httr::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  pb <- rgdal::readOGR(dsn="myfile.geojson", layer="OGRGeoJSON", stringsAsFactors=FALSE)
 
   return(pb)
 }
