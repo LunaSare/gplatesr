@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-`gplatesr` is an R package contaning example code showing how to use the gplates web service to get plate reconstructions directly from http requests.
+`gplatesr` is an R package contaning example code showing how to use the GPlates web service to get plate reconstructions directly from http requests. GPlates is developed by the EarthByte Group [https://www.earthbyte.org]
 
 # Installation
 First, install `gplatesr` into your computer. Soon you'll be able to install the stable version of the package from cran
@@ -35,7 +35,7 @@ library(gplatesr)
 
 # Reconstructing plates at any point in time
 
-First load necessary libraries for graph generation
+First load some necessary libraries for graph generation
 ```{r, eval = TRUE}
 library(ggplot2)
 library(ggthemes)
@@ -77,10 +77,12 @@ gg <- gg + theme_map()
 gg <- gg + ggtitle(sprintf('Time = %0.1fMa', recon_time))
 gg <- gg + theme(panel.border=element_blank())
 ```
+
 Now you can print your reconstruction on screen by simpy calling the `gg` object
 ```{r, eval = FALSE}
 gg
 ```
+
 Or you can save it to disk as pdf or png using:
 ```{r, eval = FALSE}
 pdf("my-reconstruction.pdf", width = 680, height = 480, units = "px", pointsize = 12)

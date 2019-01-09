@@ -41,7 +41,7 @@ gplates_reconstruct_coastlines <- function(age){
   return(dat)
 }
 
-#' Reconstruct tectonic plates polygons
+#' Reconstruct static polygons
 #' @inherit gplates_reconstruct_point
 #' @return An S4 object of class SpatialPolygonsDataFrame
 #' @export
