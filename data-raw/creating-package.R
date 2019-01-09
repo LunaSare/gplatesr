@@ -46,6 +46,6 @@ gg <- gg + ggtitle(sprintf('Time = %0.1fMa', recon_time))
 gg <- gg + theme(panel.border=element_blank())
 gg
 
-png("plate-recons-140.png", width = 680, height = 480, units = "px", pointsize = 12)
+png("vignettes/plate-recons-140.png", width = 680, height = 480, units = "px", pointsize = 12)
 print(gg)
 dev.off()

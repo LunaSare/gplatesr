@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "dietmar.muller@sydney.edu.au")
 Maintainer: Luna L. Sanchez-Reyes <sanchez.reyes.luna@gmail.com>
-Description: R examples from GPlates.
+Description: R code examples showing how to use the GPlates web service to get plate reconstructions directly from http requests.
 Depends:
     R (>= 3.2.3)
 Imports:
@@ -20,7 +20,8 @@ Imports:
     ggthemes,
     mapproj,
     rmarkdown,
-    knitr
+    knitr,
+    sp
 URL: https://www.earthbyte.org
 RoxygenNote: 6.1.1
 License: GPL (>=2)

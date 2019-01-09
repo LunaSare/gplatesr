@@ -17,5 +17,5 @@ devtools::install_github("LunaSare/gplatesr")
 ## Following the example code in the vignette you can generate figures like this one
 
 ```{r, echo = F}
-knitr::include_graphics("plate-recons-140.png", dpi = 360)
+![alt text](vignettes/plate-recons-140.png){width=75%}
 ```
