@@ -14,8 +14,6 @@ Alternatively you can install it directly from github with:
 devtools::install_github("LunaSare/gplatesr")
 ```
 
-## Following the example code in the vignette you can generate figures like this one
+and follow the vignette to generate your own plate reconstruction images at any geologic point in time.
 
-```{r, echo = F}
-![alt text](vignettes/plate-recons-140.png){width=75%}
-```
+![alt text](vignettes/plate-recons-140.png?raw=true){width=75%}
