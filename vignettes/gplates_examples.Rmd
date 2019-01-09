@@ -1,0 +1,36 @@
+---
+title: "GPlates Examples"
+author: "EarthByte Group"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{GPlates Examples}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`gplatesr` is an R package contaning example code showing how to use the gplates web service to get plate reconstructions directly from http requests.
+
+# Installation
+First, install `gplatesr` into your computer. Soon you'll be able to install the stable version of the package from cran
+```r
+install.packages("gplatesr")
+```
+or the development version from github
+```r
+devtools::install_github("LunaSare/gplatesr")
+```
+
+Now load the package into the R workspace.
+```{r, eval = TRUE}
+library("gplatesr")
+# devtools::load_all("~/Desktop/datelife/")
+
+```
