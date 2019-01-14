@@ -1,4 +1,4 @@
-#gplatesr
+# gplatesr
 
 `gplatesr` is an R package with example code showing how to use the GPlates web service to generate plate reconstructions directly from http requests. GPlates is developed by the EarthByte Group [https://www.earthbyte.org]
 
