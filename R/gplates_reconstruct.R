@@ -8,7 +8,7 @@
 gplates_reconstruct_point <- function(lon,lat,age){
 
   url <- 'http://gws.gplates.org/reconstruct/reconstruct_points/'
-  query <- sprintf('?points=%d,%d&time=%d&model=default',lon,lat,age)
+  query <- sprintf('?points=%d,%d&time=%d&model=PALEOMAP',lon,lat,age) #PALEOMAP extends to 750 ma, default only to 200 ma
 
   fullrequest <- sprintf(paste0(url,query))
 
@@ -27,7 +27,7 @@ gplates_reconstruct_point <- function(lon,lat,age){
 gplates_reconstruct_coastlines <- function(age){
 
   url <- 'http://gws.gplates.org/reconstruct/coastlines/'
-  query <- sprintf('?time=%d',age)
+  query <- sprintf('?time=%d&model=PALEOMAP',age)
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
@@ -48,7 +48,7 @@ gplates_reconstruct_coastlines <- function(age){
 gplates_reconstruct_static_polygons <- function(age){
 
   url <- 'http://gws.gplates.org/reconstruct/static_polygons/'
-  query <- sprintf('?time=%d',age)
+  query <- sprintf('?time=%d&model=PALEOMAP',age)
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)

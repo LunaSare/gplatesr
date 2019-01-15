@@ -2,7 +2,7 @@
 % Please edit documentation in R/gplates_reconstruct.R
 \name{gplates_reconstruct_static_polygons}
 \alias{gplates_reconstruct_static_polygons}
-\title{Reconstruct tectonic plates polygons}
+\title{Reconstruct static polygons}
 \usage{
 gplates_reconstruct_static_polygons(age)
 }
@@ -13,5 +13,5 @@ gplates_reconstruct_static_polygons(age)
 An S4 object of class SpatialPolygonsDataFrame
 }
 \description{
-Reconstruct tectonic plates polygons
+Reconstruct static polygons
 }

@@ -1,3 +1,4 @@
+#'Plot a map of selected age 
 #'@param mya a numeric vector of length one designating age to reconstruct in millions of years ago
 #'@param polyoutline a character vector designating the color of the polygon outlines
 #'@param polyfill a character vector designating the color of the polygons
@@ -6,7 +7,7 @@
 #'@param plateoutline a character vector designating the color of the plate outlines
 #'@param platefill a character vector designating the color of the plates
 #'@return a plot of the plates and continents at the selected age
-
+#'@export
 #plot a map
 plot_gplates <- function(mya, polyoutline, polyfill, coastoutline, coastfill, plateoutline, platefill) {
 
