@@ -6,10 +6,12 @@
 #' @inherit gplates_reconstruct_point
 #' @return An S4 object of class SpatialPolygonsDataFrame
 #' @export
+
+#need to add warning for user if age is > 200 ma. Plate polygons are unavailable for models that go deeper than 200 ma
 gplates_plate_polygons <- function(age){
 
   url <- 'http://gws.gplates.org/topology/plate_polygons/'
-  query <- sprintf('?time=%d&model=PALEOMAP',age)
+  query <- sprintf('?time=%d&model=defalut',age)
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
