@@ -2,7 +2,11 @@
 % Please edit documentation in R/plot_gplates.R
 \name{plot_gplates}
 \alias{plot_gplates}
+<<<<<<< HEAD
 \title{Plot a map of selected age}
+=======
+\title{Plot a map of tectonic plates and boundries at any point in time of Earth's history}
+>>>>>>> bf2abc2fd5578a737726841f1220bf768c0be430
 \usage{
 plot_gplates(mya, polyoutline, polyfill, coastoutline, coastfill,
   plateoutline, platefill)
@@ -26,5 +30,9 @@ plot_gplates(mya, polyoutline, polyfill, coastoutline, coastfill,
 a plot of the plates and continents at the selected age
 }
 \description{
+<<<<<<< HEAD
 Plot a map of selected age
+=======
+Plot a map of tectonic plates and boundries at any point in time of Earth's history
+>>>>>>> bf2abc2fd5578a737726841f1220bf768c0be430
 }
