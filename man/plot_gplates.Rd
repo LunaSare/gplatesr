@@ -5,7 +5,7 @@
 \title{Plot a map of tectonic plates and boundries at any point in time of Earth's history}
 \usage{
 plot_gplates(mya, polyoutline, polyfill, coastoutline, coastfill,
-  plateoutline, platefill)
+  mapoutline, mapbackground)
 }
 \arguments{
 \item{mya}{a numeric vector of length one designating age to reconstruct in millions of years ago}
@@ -18,9 +18,9 @@ plot_gplates(mya, polyoutline, polyfill, coastoutline, coastfill,
 
 \item{coastfill}{a character vector designating the color of the continents}
 
-\item{plateoutline}{a character vector designating the color of the plate outlines}
+\item{mapoutline}{a character vector designating the color to ouline the map}
 
-\item{platefill}{a character vector designating the color of the plates}
+\item{mapbackground}{a character vector designating the color of the map background}
 }
 \value{
 a plot of the plates and continents at the selected age

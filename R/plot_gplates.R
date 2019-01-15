@@ -40,3 +40,12 @@ plot_gplates <- function(mya, polyoutline, polyfill, coastoutline, coastfill, ma
 
   return(gg)
 }
+
+#' Plot map as in plot_gplates with default black background and white landmasses
+#'@inherit plot_gplates
+#'@export
+
+black_white <- function(mya) {
+  age_plot <- plot_gplates(mya = mya, polyoutline = "black", polyfill = "black", coastoutline = "#d8d8d6", coastfill = "white", mapoutline = "white", mapbackground = "black")
+  return(age_plot)
+}
