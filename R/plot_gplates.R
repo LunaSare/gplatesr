@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#'Plot a map of selected age 
-=======
 #' Plot a map of tectonic plates and boundries at any point in time of Earth's history
->>>>>>> bf2abc2fd5578a737726841f1220bf768c0be430
 #'@param mya a numeric vector of length one designating age to reconstruct in millions of years ago
 #'@param polyoutline a character vector designating the color of the polygon outlines
 #'@param polyfill a character vector designating the color of the polygons
@@ -11,12 +7,8 @@
 #'@param plateoutline a character vector designating the color of the plate outlines
 #'@param platefill a character vector designating the color of the plates
 #'@return a plot of the plates and continents at the selected age
-<<<<<<< HEAD
 #'@export
-#plot a map
-=======
 
->>>>>>> bf2abc2fd5578a737726841f1220bf768c0be430
 plot_gplates <- function(mya, polyoutline, polyfill, coastoutline, coastfill, plateoutline, platefill) {
     # original code from https://github.com/GPlates/gplates_web_service_doc/blob/master/R/run_example.R
   recon_time <- mya
