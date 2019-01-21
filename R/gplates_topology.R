@@ -32,7 +32,7 @@ gplates_plate_polygons <- function(age){
 gplates_plate_boundaries <- function(age){
 
   url <- 'http://gws.gplates.org/topology/plate_boundaries/'
-  query <- sprintf('?time=%d&model=PALEOMAP',age)
+  query <- sprintf('?time=%d&model=GOLONKA',age)
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
