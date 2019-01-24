@@ -36,7 +36,7 @@ plot_gplates <- function(mya, polyoutline, polyfill, coastoutline, coastfill, ma
   gg <- gg + ggplot2::theme(panel.border = ggplot2::element_blank())
 
   #to color map backround in the absence of gplates_plate_polygons() usage
-  gg <- gg + ggplot2::theme(panel.background = element_rect(fill = mapbackground))
+  gg <- gg + ggplot2::theme(panel.background = ggplot2::element_rect(fill = mapbackground))
 
   return(gg)
 }
