@@ -8,6 +8,12 @@ land_sea(mya, land = "white", sea = "gray")
 }
 \arguments{
 \item{mya}{a numeric vector of length one designating age to reconstruct in millions of years ago}
+
+\item{land}{What color to paint the land}
+
+\item{sea}{What color to paint the sea
+
+Burn the sky, boil the sea -- you can't take my color palette from me!}
 }
 \value{
 a plot of the plates and continents at the selected age
