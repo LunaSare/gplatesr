@@ -49,3 +49,11 @@ black_white <- function(mya) {
   age_plot <- plot_gplates(mya = mya, polyoutline = "black", polyfill = "black", coastoutline = "#d8d8d6", coastfill = "white", mapoutline = "white", mapbackground = "black")
   return(age_plot)
 }
+
+#' Plot map as in plot_gplates with user set land and sea colors
+#'@inherit plot_gplates
+#'@export
+land_sea <- function(mya, land="white", sea="gray") {
+  age_plot <- plot_gplates(mya = mya, polyoutline = sea, polyfill = sea, coastoutline = land, coastfill = land, mapoutline = land, mapbackground = sea)
+  return(age_plot)
+}
