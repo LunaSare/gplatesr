@@ -9,13 +9,13 @@ Authors@R:
 Maintainer: Luna L. Sanchez-Reyes <sanchez.reyes.luna@gmail.com>
 Description: R code examples showing how to use the GPlates web service to get plate reconstructions directly from http requests.
 Depends:
-    R (>= 3.2.3)
+    R (>= 3.2.3),
+    ggplot2
 Imports:
     jsonlite,
     magrittr,
     rgeos,
     rgdal,
-    ggplot2,
     httr,
     ggthemes,
     mapproj,
