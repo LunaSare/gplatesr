@@ -54,10 +54,11 @@ black_white <- function(mya) {
 #'@inherit plot_gplates
 #'@param land What color to paint the land
 #'@param sea What color to paint the sea
+#'@param mapbackground What color to paint the background (that which isn't the globe or plates)
 #'
 #' Burn the sky, boil the sea -- you can't take my color palette from me!
 #'@export
-land_sea <- function(mya, land="white", sea="gray") {
-  age_plot <- plot_gplates(mya = mya, polyoutline = sea, polyfill = sea, coastoutline = land, coastfill = land, mapoutline = land, mapbackground = sea)
+land_sea <- function(mya, land="gray", sea="white", mapbackground="white") {
+  age_plot <- plot_gplates(mya = mya, polyoutline = sea, polyfill = sea, coastoutline = land, coastfill = land, mapoutline = land, mapbackground = mapbackground)
   return(age_plot)
 }
