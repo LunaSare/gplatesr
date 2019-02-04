@@ -4,10 +4,13 @@
 \alias{land_sea}
 \title{Plot map as in plot_gplates with user set land and sea colors}
 \usage{
-land_sea(mya, land = "gray", sea = "white", mapbackground = "white")
+land_sea(mya, base_url = "http://gws.gplates.org/", land = "gray",
+  sea = "white", mapbackground = "white")
 }
 \arguments{
 \item{mya}{a numeric vector of length one designating age to reconstruct in millions of years ago}
+
+\item{base_url}{The url to use; make sure it ends with a slash}
 
 \item{land}{What color to paint the land}
 

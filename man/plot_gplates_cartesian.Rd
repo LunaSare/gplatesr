@@ -5,7 +5,7 @@
 \title{Plot a map of tectonic plates and boundries at any point in time of Earth's history keeping Cartesian coordinates}
 \usage{
 plot_gplates_cartesian(mya, polyoutline, polyfill, coastoutline, coastfill,
-  mapoutline, mapbackground)
+  mapoutline, mapbackground, base_url = "http://gws.gplates.org/")
 }
 \arguments{
 \item{mya}{a numeric vector of length one designating age to reconstruct in millions of years ago}
@@ -21,6 +21,8 @@ plot_gplates_cartesian(mya, polyoutline, polyfill, coastoutline, coastfill,
 \item{mapoutline}{a character vector designating the color to ouline the map}
 
 \item{mapbackground}{a character vector designating the color of the map background}
+
+\item{base_url}{The url to use; make sure it ends with a slash}
 }
 \value{
 a plot of the plates and continents at the selected age

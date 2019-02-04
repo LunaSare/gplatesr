@@ -21,7 +21,8 @@ Imports:
     mapproj,
     rmarkdown,
     knitr,
-    sp
+    sp,
+    stevedore
 URL: https://www.earthbyte.org
 RoxygenNote: 6.1.1
 License: GPL (>=2)

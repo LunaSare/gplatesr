@@ -6,14 +6,15 @@
 #'@param coastfill a character vector designating the color of the continents
 #'@param mapoutline a character vector designating the color to ouline the map
 #'@param mapbackground a character vector designating the color of the map background
+#'@param base_url The url to use; make sure it ends with a slash
 #'@return a plot of the plates and continents at the selected age
 #'@export
 
-plot_gplates <- function(mya, polyoutline, polyfill, coastoutline, coastfill, mapoutline, mapbackground) {
+plot_gplates <- function(mya, polyoutline, polyfill, coastoutline, coastfill, mapoutline, mapbackground, base_url='http://gws.gplates.org/') {
     # original code from https://github.com/GPlates/gplates_web_service_doc/blob/master/R/run_example.R
   recon_time <- mya
-  dat <- gplates_reconstruct_coastlines(recon_time)
-  dat2 <- gplates_reconstruct_static_polygons(recon_time)
+  dat <- gplates_reconstruct_coastlines(recon_time, base_url=base_url)
+  dat2 <- gplates_reconstruct_static_polygons(recon_time, base_url=base_url)
   #gplates_plate_polygons() can only be used with reconstruction models SETON2012 (the default) and MULLER2016 which only extend to 200 and 230 Ma, respectively.
   # dat3 <- gplates_plate_polygons(recon_time)
   dat_map <- ggplot2::fortify(dat)
@@ -50,14 +51,15 @@ plot_gplates <- function(mya, polyoutline, polyfill, coastoutline, coastfill, ma
 #'@param coastfill a character vector designating the color of the continents
 #'@param mapoutline a character vector designating the color to ouline the map
 #'@param mapbackground a character vector designating the color of the map background
+#'@param base_url The url to use; make sure it ends with a slash
 #'@return a plot of the plates and continents at the selected age
 #'@export
 
-plot_gplates_cartesian <- function(mya, polyoutline, polyfill, coastoutline, coastfill, mapoutline, mapbackground) {
+plot_gplates_cartesian <- function(mya, polyoutline, polyfill, coastoutline, coastfill, mapoutline, mapbackground, base_url='http://gws.gplates.org/') {
     # original code from https://github.com/GPlates/gplates_web_service_doc/blob/master/R/run_example.R
   recon_time <- mya
-  dat <- gplates_reconstruct_coastlines(recon_time)
-  dat2 <- gplates_reconstruct_static_polygons(recon_time)
+  dat <- gplates_reconstruct_coastlines(recon_time, base_url=base_url)
+  dat2 <- gplates_reconstruct_static_polygons(recon_time, base_url=base_url)
   #gplates_plate_polygons() can only be used with reconstruction models SETON2012 (the default) and MULLER2016 which only extend to 200 and 230 Ma, respectively.
   # dat3 <- gplates_plate_polygons(recon_time)
   dat_map <- ggplot2::fortify(dat)
@@ -89,8 +91,8 @@ plot_gplates_cartesian <- function(mya, polyoutline, polyfill, coastoutline, coa
 #'@inherit plot_gplates
 #'@export
 
-black_white <- function(mya) {
-  age_plot <- plot_gplates(mya = mya, polyoutline = "black", polyfill = "black", coastoutline = "#d8d8d6", coastfill = "white", mapoutline = "white", mapbackground = "black")
+black_white <- function(mya, base_url='http://gws.gplates.org/') {
+  age_plot <- plot_gplates(mya = mya, polyoutline = "black", polyfill = "black", coastoutline = "#d8d8d6", coastfill = "white", mapoutline = "white", mapbackground = "black", base_url=base_url)
   return(age_plot)
 }
 
@@ -102,7 +104,7 @@ black_white <- function(mya) {
 #'
 #' Burn the sky, boil the sea -- you can't take my color palette from me!
 #'@export
-land_sea <- function(mya, land="gray", sea="white", mapbackground="white") {
-  age_plot <- plot_gplates(mya = mya, polyoutline = sea, polyfill = sea, coastoutline = land, coastfill = land, mapoutline = land, mapbackground = mapbackground)
+land_sea <- function(mya, base_url='http://gws.gplates.org/', land="gray", sea="white", mapbackground="white") {
+  age_plot <- plot_gplates(mya = mya, polyoutline = sea, polyfill = sea, coastoutline = land, coastfill = land, mapoutline = land, mapbackground = mapbackground, base_url=base_url)
   return(age_plot)
 }
