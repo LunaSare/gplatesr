@@ -12,7 +12,7 @@ gplates_plate_polygons <- function(age, base_url='http://gws.gplates.org/'){
   url <- paste0(base_url,'topology/plate_polygons/')
 
 #  url <- 'http://gws.gplates.org/topology/plate_polygons/'
-  query <- sprintf('?time=%d&model=defalut',age)
+  query <- sprintf('?time=%d&model=defalut',as.integer(age))
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
@@ -35,7 +35,7 @@ gplates_plate_boundaries <- function(age, base_url='http://gws.gplates.org/'){
   url <- paste0(base_url,'topology/plate_boundaries/')
 
  # url <- 'http://gws.gplates.org/topology/plate_boundaries/'
-  query <- sprintf('?time=%d&model=GOLONKA',age)
+  query <- sprintf('?time=%d&model=GOLONKA',as.integer(age))
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
