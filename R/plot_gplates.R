@@ -32,7 +32,7 @@ plot_gplates <- function(mya, polyoutline, polyfill, coastoutline, coastfill, ma
   gg <- gg + ggplot2::scale_size(name="Magnitude", trans="exp", labels=c(5:8), range=c(1, 20))
   gg <- gg + ggplot2::coord_map("mollweide")
   gg <- gg + ggthemes::theme_map()
-  gg <- gg + ggplot2::ggtitle(sprintf('Time = %0.1fMa', recon_time))
+  #gg <- gg + ggplot2::ggtitle(sprintf('Time = %0.1fMa', recon_time)) #throwing an error
   gg <- gg + ggplot2::theme(panel.border = ggplot2::element_blank())
 
   #to color map backround in the absence of gplates_plate_polygons() usage
