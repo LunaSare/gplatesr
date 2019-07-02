@@ -4,7 +4,8 @@
 \alias{gplates_reconstruct_point}
 \title{Reconstruct a point}
 \usage{
-gplates_reconstruct_point(lon, lat, age)
+gplates_reconstruct_point(lon, lat, age,
+  base_url = "http://gws.gplates.org/")
 }
 \arguments{
 \item{lon}{A numeric vector of length one.}
@@ -12,6 +13,8 @@ gplates_reconstruct_point(lon, lat, age)
 \item{lat}{A numeric vector of length one.}
 
 \item{age}{A numeric vector of length one indicating the geologic time to reconstruct.}
+
+\item{base_url}{The url to use; make sure it ends with a slash}
 }
 \value{
 Coordinates

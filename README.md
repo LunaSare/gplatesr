@@ -15,3 +15,11 @@ devtools::install_github("LunaSare/gplatesr")
 and follow the vignette to generate your own plate reconstruction images at any geologic point in time.
 
 <span style="display:block;text-align:center">![my plate](vignettes/plate-recons-140.png?raw=true)
+
+If the gplates server is down, and if you have docker installed on your computer, you can do
+
+```
+launch_docker()
+```
+
+And then change the base_url argument of functions to `http://localhost:8888/`

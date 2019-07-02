@@ -8,10 +8,11 @@
 #' @export
 
 #need to add warning for user if age is > 200 ma. Plate polygons are unavailable for models that go deeper than 200 ma
-gplates_plate_polygons <- function(age){
+gplates_plate_polygons <- function(age, base_url='http://gws.gplates.org/'){
+  url <- paste0(base_url,'topology/plate_polygons/')
 
-  url <- 'http://gws.gplates.org/topology/plate_polygons/'
-  query <- sprintf('?time=%d&model=defalut',age)
+#  url <- 'http://gws.gplates.org/topology/plate_polygons/'
+  query <- sprintf('?time=%d&model=defalut',as.integer(age))
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
@@ -29,10 +30,12 @@ gplates_plate_polygons <- function(age){
 #' @inherit gplates_reconstruct_point
 #' @return An S4 object of class SpatialLinesDataFrame
 #' @export
-gplates_plate_boundaries <- function(age){
+gplates_plate_boundaries <- function(age, base_url='http://gws.gplates.org/'){
 
-  url <- 'http://gws.gplates.org/topology/plate_boundaries/'
-  query <- sprintf('?time=%d&model=GOLONKA',age)
+  url <- paste0(base_url,'topology/plate_boundaries/')
+
+ # url <- 'http://gws.gplates.org/topology/plate_boundaries/'
+  query <- sprintf('?time=%d&model=GOLONKA',as.integer(age))
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)

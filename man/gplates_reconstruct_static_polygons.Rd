@@ -4,10 +4,13 @@
 \alias{gplates_reconstruct_static_polygons}
 \title{Reconstruct static polygons}
 \usage{
-gplates_reconstruct_static_polygons(age)
+gplates_reconstruct_static_polygons(age,
+  base_url = "http://gws.gplates.org/")
 }
 \arguments{
 \item{age}{A numeric vector of length one indicating the geologic time to reconstruct.}
+
+\item{base_url}{The url to use; make sure it ends with a slash}
 }
 \value{
 An S4 object of class SpatialPolygonsDataFrame

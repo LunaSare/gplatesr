@@ -4,14 +4,19 @@
 \alias{land_sea}
 \title{Plot map as in plot_gplates with user set land and sea colors}
 \usage{
-land_sea(mya, land = "white", sea = "gray")
+land_sea(mya, base_url = "http://gws.gplates.org/", land = "gray",
+  sea = "white", mapbackground = "white")
 }
 \arguments{
 \item{mya}{a numeric vector of length one designating age to reconstruct in millions of years ago}
 
+\item{base_url}{The url to use; make sure it ends with a slash}
+
 \item{land}{What color to paint the land}
 
-\item{sea}{What color to paint the sea
+\item{sea}{What color to paint the sea}
+
+\item{mapbackground}{What color to paint the background (that which isn't the globe or plates)
 
 Burn the sky, boil the sea -- you can't take my color palette from me!}
 }
