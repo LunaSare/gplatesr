@@ -4,8 +4,7 @@
 \alias{gplates_reconstruct_point}
 \title{Reconstruct a point}
 \usage{
-gplates_reconstruct_point(lon, lat, age,
-  base_url = "http://gws.gplates.org/")
+gplates_reconstruct_point(lon, lat, age, base_url = "http://gws.gplates.org/")
 }
 \arguments{
 \item{lon}{A numeric vector of length one.}

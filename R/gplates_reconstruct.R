@@ -19,7 +19,8 @@ launch_docker <- function() {
 
 gplates_reconstruct_point <- function(lon,lat,age, base_url='http://gws.gplates.org/'){
   url <- paste0(base_url,'reconstruct/reconstruct_points/')
-  query <- sprintf('?points=%f,%f&time=%d&model=GOLONKA',lon,lat,as.integer(age)) #The Paleobiodb navigator uses GOLONKA, PALEOMAP extends to 750 ma, default only to 200 ma
+ # query <- sprintf('?points=%f,%f&time=%d&model=GOLONKA',lon,lat,as.integer(age)) #The Paleobiodb navigator uses GOLONKA, PALEOMAP extends to 750 ma, default only to 200 ma
+  query <- sprintf('?points=%f,%f&time=%f&model=GOLONKA',lon,lat,as.numeric(age)) #The Paleobiodb navigator uses GOLONKA, PALEOMAP extends to 750 ma, default only to 200 ma
 
   fullrequest <- sprintf(paste0(url,query))
 
@@ -37,7 +38,8 @@ gplates_reconstruct_point <- function(lon,lat,age, base_url='http://gws.gplates.
 #' @export
 gplates_reconstruct_coastlines <- function(age, base_url='http://gws.gplates.org/'){
   url <- paste0(base_url,'reconstruct/coastlines/')
-  query <- sprintf('?time=%d&model=GOLONKA',as.integer(age))
+#  query <- sprintf('?time=%d&model=GOLONKA',as.integer(age))
+  query <- sprintf('?time=%f&model=GOLONKA',as.numeric(age))
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
@@ -46,7 +48,8 @@ gplates_reconstruct_coastlines <- function(age, base_url='http://gws.gplates.org
   bin <- httr::content(r, "raw")
   writeBin(bin, paste0(tempdir(), "/myfile.geojson"))
 
-  dat <- rgdal::readOGR(dsn=paste0(tempdir(), "/myfile.geojson"), layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  #dat <- rgdal::readOGR(dsn=paste0(tempdir(), "/myfile.geojson"), layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  dat <- rgdal::readOGR(dsn=paste0(tempdir(), "/myfile.geojson"))
 
   return(dat)
 }
@@ -58,7 +61,8 @@ gplates_reconstruct_coastlines <- function(age, base_url='http://gws.gplates.org
 gplates_reconstruct_static_polygons <- function(age, base_url='http://gws.gplates.org/'){
     url <- paste0(base_url,'reconstruct/static_polygons/')
   #url <- 'http://gws.gplates.org/reconstruct/static_polygons/'
-  query <- sprintf('?time=%d&model=GOLONKA',as.integer(age))
+  #query <- sprintf('?time=%d&model=GOLONKA',as.integer(age))
+  query <- sprintf('?time=%f&model=GOLONKA',as.numeric(age))
 
   fullrequest <- sprintf(paste0(url,query))
   print(fullrequest)
@@ -67,7 +71,8 @@ gplates_reconstruct_static_polygons <- function(age, base_url='http://gws.gplate
   bin <- httr::content(r, "raw")
   writeBin(bin, paste0(tempdir(), "/myfile.geojson"))
 
-  dat <- rgdal::readOGR(dsn=paste0(tempdir(), "/myfile.geojson"), layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  #dat <- rgdal::readOGR(dsn=paste0(tempdir(), "/myfile.geojson"), layer="OGRGeoJSON", stringsAsFactors=FALSE)
+  dat <- rgdal::readOGR(dsn=paste0(tempdir(), "/myfile.geojson"))
 
   return(dat)
 }

@@ -4,8 +4,7 @@
 \alias{gplates_reconstruct_static_polygons}
 \title{Reconstruct static polygons}
 \usage{
-gplates_reconstruct_static_polygons(age,
-  base_url = "http://gws.gplates.org/")
+gplates_reconstruct_static_polygons(age, base_url = "http://gws.gplates.org/")
 }
 \arguments{
 \item{age}{A numeric vector of length one indicating the geologic time to reconstruct.}

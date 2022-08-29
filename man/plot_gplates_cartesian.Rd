@@ -4,8 +4,16 @@
 \alias{plot_gplates_cartesian}
 \title{Plot a map of tectonic plates and boundries at any point in time of Earth's history keeping Cartesian coordinates}
 \usage{
-plot_gplates_cartesian(mya, polyoutline, polyfill, coastoutline, coastfill,
-  mapoutline, mapbackground, base_url = "http://gws.gplates.org/")
+plot_gplates_cartesian(
+  mya,
+  polyoutline,
+  polyfill,
+  coastoutline,
+  coastfill,
+  mapoutline,
+  mapbackground,
+  base_url = "http://gws.gplates.org/"
+)
 }
 \arguments{
 \item{mya}{a numeric vector of length one designating age to reconstruct in millions of years ago}
